@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+ </ion-buttons>
+    <ion-title>lista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-button color="primary"  (click)="Nuevo()"  >Agregar producto</ion-button>
+  <ion-item>
+  <ion-input type="text" name="filtrar" placeholder="Buscar" [(ngModel)]="filtrar" ></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor="let producto of productos | buscar:filtrar">
+      <ion-label>Nombre :  {{producto.Nombre}}</ion-label> 
+      <ion-label>Descricion : {{producto.Descripcion}}</ion-label> 
+      <ion-label>Valor :   {{producto.Valor}}</ion-label> 
+     <!--<ion-button color="primary"  (click)="Modificar(producto.idArticulo,producto.Nombre,producto.Descripcion,producto.Valor)"  >Modificar</ion-button>-->
+      <ion-button color="primary"  (click)="Modificar(producto)"  >Modificar</ion-button>
+      <ion-button color="primary"  (click)="presentAlert(producto.idArticulo)"   >Borrar</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="primary"  (click)="Logout()"  >Salir</ion-button>
+</ion-content>
+
+

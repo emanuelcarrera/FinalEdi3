@@ -8,9 +8,30 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
+  {
+    path: 'lista',
+    loadChildren: () => import('./pantallas/lista/lista.module').then( m => m.ListaPageModule)
+  },
+  {
+    path: 'alta-producto',
+    loadChildren: () => import('./pantallas/alta-producto/alta-producto.module').then( m => m.AltaProductoPageModule)
+  },
+  {
+    path: 'edit-producto',
+    loadChildren: () => import('./pantallas/edit-producto/edit-producto.module').then( m => m.EditProductoPageModule)
+  },
+  {
+    path: 'alta-usuario',
+    loadChildren: () => import('./pantallas/alta-usuario/alta-usuario.module').then( m => m.AltaUsuarioPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pantallas/login/login.module').then( m => m.LoginPageModule)
+  },
+
 ];
 
 @NgModule({

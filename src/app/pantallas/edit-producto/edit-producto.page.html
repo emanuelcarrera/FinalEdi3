@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+   </ion-buttons>
+    <ion-title>editProducto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="center" *ngIf="producto">
+<ion-item>
+<ion-input type="text" name="Nombre"  [(ngModel)]="producto.Nombre" ></ion-input>
+</ion-item>
+<ion-item>
+<ion-input type="text" name="Descricion"  [(ngModel)]="producto.Descripcion" ></ion-input>
+</ion-item>
+<ion-item>
+<ion-input type="text" name="Valor" [(ngModel)]="producto.Valor" ></ion-input>
+</ion-item>
+<ion-button color="primary"  (click)="Guardar(producto)"  text="Guardar" >Guardar</ion-button>
+
+
+
+</ion-content>

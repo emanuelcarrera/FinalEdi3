@@ -1,0 +1,25 @@
+<ion-header>
+
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content class="center" *ngIf="usuario">
+    <ion-item>
+    <ion-input type="text" name="Nombre"   placeholder="Nombre Usuario" [(ngModel)]="usuario.Nombre" ></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-input type="password" name="pass" placeholder="Contraseña" [(ngModel)]="usuario.pass" ></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-input type="email" name="email" placeholder="Email" [(ngModel)]="usuario.email" ></ion-input>
+    </ion-item>
+    <ion-button color="primary"  (click)="altaUsuario()"  text="Guardar" >Guardar</ion-button>
+  
+</ion-content>

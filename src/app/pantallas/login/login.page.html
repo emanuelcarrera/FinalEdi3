@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input type="text" name="Nombre"   placeholder="Nombre Usuario" [(ngModel)]="nombreU" ></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-input type="password" name="pass" placeholder="Contraseña"  [(ngModel)]="pass"></ion-input>
+    </ion-item>
+
+    <ion-button color="primary"  (click)="login()"  text="Login" >Login</ion-button>
+
+    <ion-button color="primary"  (click)="Registrarse()"  text="Registrarse" >Registrarse</ion-button>
+
+
+
+</ion-content>

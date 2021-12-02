@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+         <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Alta Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="center">
+  <ion-item>
+<ion-input type="text" name="Nombre" placeholder="Nombre" [(ngModel)]="producto.Nombre" ></ion-input>
+</ion-item>
+<ion-item>
+<ion-input type="text" name="Descricion" placeholder="Descripcion" [(ngModel)]="producto.Descripcion" ></ion-input>
+</ion-item>
+<ion-item>
+<ion-input type="text" name="Valor" placeholder="Valor" [(ngModel)]="producto.Valor" ></ion-input>
+</ion-item>
+<ion-button color="primary"  (click)="altaProducto()"  text="Guardar" >Guardar</ion-button>
+
+
+</ion-content>
